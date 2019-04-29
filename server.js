@@ -14,12 +14,9 @@ app.use(methodOverride('_method'))
 app.set('view engine', 'hbs');
 
 //route handler
-app.get('/users', (req, res) => {
-  userApi.getAllUsers()
-    .then(users => {
-      res.render("users/users", { listOUsers: users })
-    });
-});
+app.get('/', function(req, res){
+    res.send('Hello World');
+ });
 
 
 //BOILER
