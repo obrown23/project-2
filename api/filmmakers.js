@@ -5,10 +5,9 @@ const mongoose = require('./db/connection.js');
 const filmmakersSchema = mongoose.Schema({
   film: String,
   director: String,
-  producer: String,
+  writer: String,
   trailer: String,
   website: String,
-  filmPitch: String,
   email: String,
   phone: Number,
 
