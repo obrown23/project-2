@@ -1,5 +1,5 @@
 const mongoose = require('./db/connection.js');
-const ObjectId = mongoose.Schema.Types.ObjectId;
+// const ObjectId = mongoose.Schema.Types.ObjectId;
 
 /* Defining the shape of the entities that we'll be using */
 const filmmakersSchema = mongoose.Schema({
@@ -14,7 +14,6 @@ const filmmakersSchema = mongoose.Schema({
 
 });
 
-/* create an API that will talk to the "users" collection in mongodb */
 let FilmmakersCollection = mongoose.model("Film", filmmakersSchema);
 
 function FilmAll(){
@@ -24,8 +23,20 @@ function FilmAll(){
 function FilmOne(){
     return FilmmakersCollection.findById();
 };
+function FilmNew(){
+    return FilmmakersCollection.create();
+};
+function FilmUpdate(){
+    return FilmmakersCollection.findByIdAndUpdate();
+};
+function FilmDelete(){
+    return FilmmakersCollection.findByIdAndDelete();
+};
 
 module.exports = {
 FilmAll,
-FilmOne
+FilmOne,
+FilmNew,
+FilmUpdate,
+FilmDelete
 };
