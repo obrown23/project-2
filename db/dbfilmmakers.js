@@ -5,7 +5,7 @@ let newFilmmakers = [
         film: "DrummerBoy",
         director: "Axel Foley",
         writer: "Don Cheatal",
-        trailer: String,
+        // trailer: String,
         website: "www.drummerboy.com",
         email: "drummerboy@drummerboy.org",
         phone: 6067757070,
@@ -14,7 +14,7 @@ let newFilmmakers = [
         film: "Dark Burner",
         director: "Chaz Vex",
         writer: "Duce Vannin",
-        trailer: String,
+        // trailer: String,
         website: "www.darkburner.com",
         email: "darkburner2019@vice.org",
         phone: 585434987,
@@ -24,7 +24,7 @@ let newFilmmakers = [
         film: "Sunset",
         director: "Chaz Vex",
         writer: "Duce Vannin",
-        trailer: String,
+        // trailer: String,
         website: "www.darkburner.com",
         email: "darkburner2019@vice.org",
         phone: 585434987,
@@ -34,7 +34,7 @@ let newFilmmakers = [
         film: "Ugly Dogs",
         director: "Kelly Asbury",
         writer: "David Horvath ",
-        trailer: String,
+        // trailer: String,
         website: "https://www.imdb.com/title/tt1946502/",
         email: "darkburner2019@vice.org",
         phone: 585434987,
@@ -44,7 +44,7 @@ let newFilmmakers = [
         film: "Captain Marvel",
         director: "Anna Boden",
         writer: "Ryan Fleck",
-        trailer: String,
+        // trailer: String,
         website: "https://www.imdb.com/title/tt4154664/",
         email: "darkburner2019@vice.org",
         phone: 585434987,
@@ -54,7 +54,7 @@ let newFilmmakers = [
         film: "Little",
         director: "Tina Gordon",
         writer: "Tracy Oliver",
-        trailer: String,
+        // trailer: String,
         website: "https://www.imdb.com/title/tt8085790/",
         email: "darkburner2019@vice.org",
         phone: 585434987,
@@ -62,3 +62,5 @@ let newFilmmakers = [
     }
 
 ]
+filmmakers.FilmNew(newFilmmakers)
+
