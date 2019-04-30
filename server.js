@@ -59,9 +59,9 @@ app.put('/filmmakers/:id', (req, res) => {
 });
 
   app.delete('/filmmakers/:id', (req, res) => {
-    filmmakersApi.FilmDelete(req.params.id, req.body)
+    filmmakersApi.FilmDelete(req.params.id)
       .then(() => {
-        res.render("/filmmakers/" + req.params.id);
+        res.redirect("/filmmakers");
       });
   });
 
