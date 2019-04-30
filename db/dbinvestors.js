@@ -38,4 +38,6 @@ let newInvestors = [
     }
 
 ]
-investors.InvestorsNew(newInvestors)
+investors.InvestorsNew(newInvestors).then(investors =>{
+    console.log('Added DB', investors)
+})

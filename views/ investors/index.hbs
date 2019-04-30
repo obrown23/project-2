@@ -1,16 +1,25 @@
-<h1>Users</h1>
-<ul>
-  {{#each filmmakers}}
-    <li>
-      <a href="/users/{{ _id }}">
-      {{ name }}
-      </a>
-    </li>
-  {{/each}}
-</ul>
+<h1>Welcome Investors!!!</h1>
+<h3>Please Input Your Information Below</h3>
 
-<form method="POST" action="/users">
+<div>
+  {{#each investor}}
+    <p>
+      <a href="/investors/{{ _id }}">
+      {{ film }}
+
+      </a>
+    </p>
+  {{/each}}
+</div>
+
+<form method="POST" action="/investors">
   <label for="name">Name</label>
-  <input type="text" name="name" value="" />
+  <input type="text" name="name" value="" /> <br>
+    <label for="name">Website</label>
+  <input type="text" name="website" value="" /> <br>
+    <label for="name">Email</label>
+  <input type="text" name="email" value="" /> <br>
+    <label for="name">Phone</label>
+  <input type="text" name="phone" value="" /> <br>
   <input type="submit" value="Create New User" />
 </form>
