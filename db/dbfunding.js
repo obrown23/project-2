@@ -1,4 +1,4 @@
-let funding = require('../api/filmmakers.js')
+let funding = require('../api/funding.js')
 
 let newFunding = [
     {
@@ -32,16 +32,16 @@ let newFunding = [
         phone: 6067757070,
     }, 
     {
-        name: "DrummerBoy",
-        website: "www.drummerboy.com",
-        email: "drummerboy@drummerboy.org",
-        phone: 6067757070,
+        name: "National Film and Video Foundation",
+        website: "http://nfvf.co.za/home/index.php?ipkContentID=57",
+        email: "info@nfvf.co.za",
+        phone: 7114830880,
     }, 
     {
-        name: "DrummerBoy",
-        website: "www.drummerboy.com",
-        email: "drummerboy@drummerboy.org",
-        phone: 6067757070,
+        name: "Alter-Ciné Foundation",
+        website: "http://altercine.org/html/en/programme-de-bourses.php",
+        email: "altercine@videotron.ca",
+        phone: 6756542348,
     },  
 ]
-filmmakers.FilmNew(newFilmmakers)
+funding.FundingNew(newFunding)
