@@ -1,65 +1,41 @@
-let filmmakers = require('../api/filmmakers.js')
+let investors = require('../api/investors.js')
 
-let newFilmmakers = [
+let newInvestors = [
     {
-        film: "DrummerBoy",
-        director: "Axel Foley",
-        writer: "Don Cheatal",
-        // trailer: String,
-        website: "www.drummerboy.com",
-        email: "drummerboy@drummerboy.org",
-        phone: 6067757070,
+        name: "Jose Tyler",
+        website: "www.josetyler.com",
+        email: "jose.tyler@gmail.com",
+        phone: "4843225464",
     }, 
     {
-        film: "Dark Burner",
-        director: "Chaz Vex",
-        writer: "Duce Vannin",
-        // trailer: String,
-        website: "www.darkburner.com",
-        email: "darkburner2019@vice.org",
-        phone: 585434987,
+        name: "Ali Harper",
+        website: "www.aliHarperRush.org",
+        email: "allifinancial@financial.org",
+        phone: "6107615592",
       
     },
     {
-        film: "Sunset",
-        director: "Chaz Vex",
-        writer: "Duce Vannin",
-        // trailer: String,
-        website: "www.darkburner.com",
-        email: "darkburner2019@vice.org",
-        phone: 585434987,
+        name: "Omar Brown",
+        website: "omarbrown.org",
+        email: "omarbrown510@gmail.com",
+        phone: "4439348370",
+    },
+    {
+        name: "Jason Pergy",
+        website: "www.jPergyLawn.org",
+        email: "lawnPergy@pergy.org",
+        phone: "5419675667",
       
     },
     {
-        film: "Ugly Dogs",
-        director: "Kelly Asbury",
-        writer: "David Horvath ",
-        // trailer: String,
-        website: "https://www.imdb.com/title/tt1946502/",
-        email: "darkburner2019@vice.org",
-        phone: 585434987,
-      
+        name: "Todd Wilcher",
+        website: "www.eastAtlantaTodd.com",
+        email: "eastAtlantaTodd@aol.com",
+        phone: "6635197475",
     },
     {
-        film: "Captain Marvel",
-        director: "Anna Boden",
-        writer: "Ryan Fleck",
-        // trailer: String,
-        website: "https://www.imdb.com/title/tt4154664/",
-        email: "darkburner2019@vice.org",
-        phone: 585434987,
-      
-    },
-    {
-        film: "Little",
-        director: "Tina Gordon",
-        writer: "Tracy Oliver",
-        // trailer: String,
-        website: "https://www.imdb.com/title/tt8085790/",
-        email: "darkburner2019@vice.org",
-        phone: 585434987,
-      
+     
     }
 
 ]
-filmmakers.FilmNew(newFilmmakers)
+investors.InvestorsNew(newInvestors)

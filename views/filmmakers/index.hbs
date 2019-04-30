@@ -1,0 +1,30 @@
+<h1>Filmmakers List</h1>
+
+<div>
+  {{#each filmmaker}}
+    <p>
+      <a href="/filmmakers/{{ _id }}">
+      {{ film }}
+
+      </a>
+    </p>
+  {{/each}}
+</div>
+
+<form method="POST" action="/filmmakers">
+  <label for="name">Film</label>
+  <input type="text" name="film" value="" /> <br>
+    <label for="name">Director</label>
+  <input type="text" name="director" value="" /> <br>
+    <label for="name">Writer</label>
+  <input type="text" name="writer" value="" /><br>
+    <label for="name">Trailer</label>
+  <input type="text" name="trailer" value="" /> <br>
+    <label for="name">Website</label>
+  <input type="text" name="website" value="" /> <br>
+    <label for="name">Email</label>
+  <input type="text" name="email" value="" /> <br>
+    <label for="name">Phone</label>
+  <input type="text" name="phone" value="" /> <br>
+  <input type="submit" value="Create New User" />
+</form>

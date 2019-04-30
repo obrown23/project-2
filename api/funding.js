@@ -1,4 +1,4 @@
-const mongoose = require('./db/connection.js');
+const mongoose = require('../db/connection');
 // const ObjectId = mongoose.Schema.Types.ObjectId;
 
 /* Defining the shape of the entities that we'll be using */
@@ -6,7 +6,7 @@ const fundingSchema = mongoose.Schema({
   name: String,
   website: String,
   email: String,
-  phone: Number,
+  phone: String,
 
 });
 

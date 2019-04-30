@@ -1,0 +1,15 @@
+<h1>{{filmmakers.film}}</h1>
+<h3>{{filmmakers.director}}</h3>
+<h3>{{filmmakers.writer}}</h3>
+<h3>{{filmmakers.trailer}}</h3>
+<h3>{{filmmakers.website}}</h3>
+<h3>{{filmmakers.email}}</h3>
+<h3>{{filmmakers.phone}}</h3>
+
+<a href="/filmmakers/{{filmmakers.id}}/update">
+        <input type="submit" value="Update Film" />
+</a>
+
+<form method="POST" action="/filmmakers/{{ filmmakers ._id }}?_method=DELETE">
+    <input type="submit" value="Delete User" />
+</form>

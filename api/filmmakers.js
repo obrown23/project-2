@@ -1,4 +1,4 @@
-const mongoose = require('./db/connection.js');
+const mongoose = require('../db/connection');
 // const ObjectId = mongoose.Schema.Types.ObjectId;
 
 /* Defining the shape of the entities that we'll be using */
@@ -9,7 +9,7 @@ const filmmakersSchema = mongoose.Schema({
   trailer: String,
   website: String,
   email: String,
-  phone: Number,
+  phone: String,
 
 });
 
@@ -19,17 +19,17 @@ function FilmAll(){
     return FilmmakersCollection.find();
 };
 
-function FilmOne(){
-    return FilmmakersCollection.findById();
+function FilmOne(film){
+    return FilmmakersCollection.findById(film);
 };
-function FilmNew(){
-    return FilmmakersCollection.create();
+function FilmNew(film){
+    return FilmmakersCollection.create(film);
 };
-function FilmUpdate(){
-    return FilmmakersCollection.findByIdAndUpdate();
+function FilmUpdate(x, y){
+    return FilmmakersCollection.findByIdAndUpdate(x, y);
 };
-function FilmDelete(){
-    return FilmmakersCollection.findByIdAndDelete();
+function FilmDelete(r,h){
+    return FilmmakersCollection.findByIdAndDelete(r,h);
 };
 
 module.exports = {
