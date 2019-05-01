@@ -102,41 +102,41 @@ app.delete('/investors/:id', (req, res) => {
 });
 
 // grabing all funding companies
-app.get('/funding', function (req, res) {
+app.get('/funders', function (req, res) {
     fundingApi.FundingAll()
-    .then(fundings => {
-        res.render('funding/index', {funding})
+    .then(funding => {
+        res.render('funders/index', {funding})
     })
 })
-app.get('/funding/:id', function (req, res) {
+app.get('/funders/:id', function (req, res) {
     fundingApi.FundingOne(req.params.id)
         .then(fundings => {
-            res.render('funding/single', { funding })
+            res.render('funders/single', { fundings })
         })
 });
-app.post('/funding', function (req, res) {
+app.post('/funders', function (req, res) {
     fundingApi.FundingNew(req.body)
         .then(() => {
-            res.redirect("/funding")
+            res.redirect("/funders")
         })
 });
-app.get('/funding/:id/update', function (req, res) {
-    investorsApi.FundingOne(req.params.id)
+app.get('/funders/:id/update', function (req, res) {
+    fundingApi.FundingOne(req.params.id)
         .then(fundings => {
             res.render('funding/update', { fundings});
         })
 });
-app.put('/funding/:id', (req, res) => {
+app.put('/funders/:id', (req, res) => {
     fundingApi.FundingUpdate(req.params.id, req.body)
         .then(() => {
-            res.redirect("/funding/" + req.params.id)
+            res.redirect("/funders/" + req.params.id)
         })
 });
 
-app.delete('/funding/:id', (req, res) => {
+app.delete('/funders/:id', (req, res) => {
     fundingApi.FundingDelete(req.params.id)
         .then(() => {
-            res.redirect("/funding");
+            res.redirect("/funders");
         });
 });
 
