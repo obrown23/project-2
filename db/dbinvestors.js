@@ -1,4 +1,4 @@
-let investors = require('../api/investors.js')
+let investor = require('../api/investors.js')
 
 let newInvestors = [
     {
@@ -33,11 +33,8 @@ let newInvestors = [
         email: "eastAtlantaTodd@aol.com",
         phone: "6635197475",
     },
-    {
-     
-    }
 
 ]
-investors.InvestorsNew(newInvestors).then(investors =>{
+investor.InvestorsNew(newInvestors).then(investors =>{
     console.log('Added DB', investors)
 })

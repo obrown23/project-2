@@ -16,17 +16,17 @@ function InvestorsAll(){
     return InvestorsCollection.find();
 };
 
-function InvestorsOne(){
-    return InvestorsCollection.findById();
+function InvestorsOne(invest){
+    return InvestorsCollection.findById(invest);
 };
-function InvestorsNew(){
-    return InvestorsCollection.create();
+function InvestorsNew(invest){
+    return InvestorsCollection.create(invest);
 };
-function InvestorsUpdate(){
-    return InvestorsCollection.findByIdAndUpdate();
+function InvestorsUpdate(x, y){
+    return InvestorsCollection.findByIdAndUpdate(x,y);
 };
-function InvestorsDelete(){
-    return InvestorsCollection.findByIdAndDelete();
+function InvestorsDelete(r, h){
+    return InvestorsCollection.findByIdAndDelete(r, h);
 };
 
 module.exports = {

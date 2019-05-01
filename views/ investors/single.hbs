@@ -1,11 +1,12 @@
-<h1>{{filmmakers.film}}</h1>
-<h3>{{filmmakers.director}}</h3>
-<h3>{{filmmakers.writer}}</h3>
-<h3>{{filmmakers.trailer}}</h3>
-<h3>{{filmmakers.website}}</h3>
-<h3>{{filmmakers.email}}</h3>
-<h3>{{filmmakers.phone}}</h3>
+<h1>{{investors.name}}</h1>
+<h3>{{investors.website}}</h3>
+<h3>{{investors.email}}</h3>
+<h3>{{investors.phone}}</h3>
 
-<form method="POST" action="/users/{{ user ._id }}?_method=DELETE">
+<a href="/investors/{{investors.id}}/update">
+        <input type="submit" value="Update Investors" />
+</a>
+
+<form method="POST" action="/investors/{{ investors ._id }}?_method=DELETE">
     <input type="submit" value="Delete User" />
 </form>

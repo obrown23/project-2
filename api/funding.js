@@ -16,17 +16,17 @@ function FundingAll(){
     return FundingCollection.find();
 };
 
-function FundingOne(){
-    return FundingCollection.findById();
+function FundingOne(fund){
+    return FundingCollection.findById(fund);
 };
-function FundingNew(){
-    return FundingCollection.create();
+function FundingNew(fund){
+    return FundingCollection.create(fund);
 };
-function FundingUpdate(){
-    return FundingCollection.findByIdAndUpdate();
+function FundingUpdate(x,y){
+    return FundingCollection.findByIdAndUpdate(x,y);
 };
-function FundingDelete(){
-    return FundingCollection.findByIdAndDelete();
+function FundingDelete(r,h){
+    return FundingCollection.findByIdAndDelete(r,h);
 };
 
 module.exports = {

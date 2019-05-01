@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const filmmakersApi = require("./api/filmmakers");
-// const investorApi = require("./api/investors");
+const investorsApi = require("./api/investors");
 // const fundingApi = require("./api/funding");
 
 //tells express to parse HTML form requests properly
@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
-// all filmmakers portion
+// grabing  all filmmakers portion
 app.get('/filmmakers', function (req, res) {
     filmmakersApi.FilmAll()
         .then(filmmaker => {
@@ -34,11 +34,6 @@ app.get('/filmmakers/:id', function (req, res) {
             res.render('filmmakers/single', { filmmakers })
         })
 });
-
-//  app.get('/filmmakers/new', function(req, res){
-//     res.render('filmmakers/new');
-//  });
-
 app.post('/filmmakers', function (req, res) {
     filmmakersApi.FilmNew(req.body)
         .then(() => {
@@ -48,7 +43,7 @@ app.post('/filmmakers', function (req, res) {
 app.get('/filmmakers/:id/update', function (req, res) {
     filmmakersApi.FilmOne(req.params.id)
         .then(film => {
-            res.render('filmmakers/update', {film});
+            res.render('filmmakers/update', { film });
         })
 });
 app.put('/filmmakers/:id', (req, res) => {
@@ -58,13 +53,38 @@ app.put('/filmmakers/:id', (req, res) => {
         })
 });
 
-  app.delete('/filmmakers/:id', (req, res) => {
+app.delete('/filmmakers/:id', (req, res) => {
     filmmakersApi.FilmDelete(req.params.id)
-      .then(() => {
-        res.redirect("/filmmakers");
-      });
-  });
+        .then(() => {
+            res.redirect("/filmmakers");
+        });
+});
 
+
+
+// grabing all investors
+app.get('/investors', function (req, res) {
+    investorsApi.InvestorsAll()
+    .then((investors) =>{
+        console.log(investorsApi.InvestorsAll())
+        res.render('investors/index', {investors})
+    })
+})
+
+app.get('/investors/:id', function (req, res) {
+    investorsApi.InvestorsOne(req.params.id)
+        .then(investor => {
+            res.render('investors/single', { investor })
+        })
+});
+
+
+app.post('/investors', function (req, res) {
+    investorsApi.InvestorsNew(req.body)
+        .then(() => {
+            res.redirect("/investors")
+        })
+});
 
 //BOILER
 const PORT = 3000;
