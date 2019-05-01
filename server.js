@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const filmmakersApi = require("./api/filmmakers");
 const investorsApi = require("./api/investors");
 const fundingApi = require("./api/funding");
+app.use('/public', express.static("public"))
 
 //tells express to parse HTML form requests properly
 //BOILER
