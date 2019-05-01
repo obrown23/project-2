@@ -1,0 +1,24 @@
+<h1>Welcome Filmmakers!!!</h1>
+<h3>Please Input Your Information Below</h3>
+
+<div>
+  {{#each funder}}
+    <p>
+      <a href="/funders/{{ _id }}">
+      {{ fund }}
+
+      </a>
+    </p>
+  {{/each}}
+</div>
+
+<form method="POST" action="/funders">
+  <label for="name">Name</label>
+    <label for="name">Website</label>
+  <input type="text" name="website" value="" /> <br>
+    <label for="name">Email</label>
+  <input type="text" name="email" value="" /> <br>
+    <label for="name">Phone</label>
+  <input type="text" name="phone" value="" /> <br>
+  <input type="submit" value="Create New User" />
+</form>

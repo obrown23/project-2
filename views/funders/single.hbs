@@ -3,6 +3,10 @@
 <h1>{{funding.email}}</h1>
 <h1>{{funding.phone}}</h1>
 
-<form method="POST" action="/users/{{ user ._id }}?_method=DELETE">
+<a href="/funders/{{funders.id}}/update">
+        <input type="submit" value="Update Fund" />
+</a>
+
+<form method="POST" action="/funders/{{ funders ._id }}?_method=DELETE">
     <input type="submit" value="Delete User" />
 </form>

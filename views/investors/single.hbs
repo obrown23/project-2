@@ -1,0 +1,12 @@
+<h1>{{investor.name}}</h1>
+<h3>{{investor.website}}</h3>
+<h3>{{investor.email}}</h3>
+<h3>{{investor.phone}}</h3>
+
+<a href="/investors/{{investor.id}}/update">
+        <input type="submit" value="Update Investors" />
+</a>
+
+<form method="POST" action="/investors/{{ investor ._id }}?_method=DELETE">
+    <input type="submit" value="Delete User" />
+</form>

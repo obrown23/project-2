@@ -4,7 +4,7 @@ const app = express();
 const methodOverride = require('method-override');
 const filmmakersApi = require("./api/filmmakers");
 const investorsApi = require("./api/investors");
-// const fundingApi = require("./api/funding");
+const fundingApi = require("./api/funding");
 
 //tells express to parse HTML form requests properly
 //BOILER
@@ -65,25 +65,79 @@ app.delete('/filmmakers/:id', (req, res) => {
 // grabing all investors
 app.get('/investors', function (req, res) {
     investorsApi.InvestorsAll()
-    .then((investors) =>{
-        console.log(investorsApi.InvestorsAll())
+    .then(investors => {
         res.render('investors/index', {investors})
     })
 })
-
 app.get('/investors/:id', function (req, res) {
     investorsApi.InvestorsOne(req.params.id)
         .then(investor => {
             res.render('investors/single', { investor })
         })
 });
-
-
 app.post('/investors', function (req, res) {
     investorsApi.InvestorsNew(req.body)
         .then(() => {
             res.redirect("/investors")
         })
+});
+app.get('/investors/:id/update', function (req, res) {
+    investorsApi.InvestorsOne(req.params.id)
+        .then(investor => {
+            res.render('investors/update', { investor });
+        })
+});
+app.put('/investors/:id', (req, res) => {
+    investorsApi.InvestorsUpdate(req.params.id, req.body)
+        .then(() => {
+            res.redirect("/investors/" + req.params.id)
+        })
+});
+
+app.delete('/investors/:id', (req, res) => {
+    investorsApi.InvestorsDelete(req.params.id)
+        .then(() => {
+            res.redirect("/investors");
+        });
+});
+
+// grabing all funding companies
+app.get('/funding', function (req, res) {
+    fundingApi.FundingAll()
+    .then(fundings => {
+        res.render('funding/index', {funding})
+    })
+})
+app.get('/funding/:id', function (req, res) {
+    fundingApi.FundingOne(req.params.id)
+        .then(fundings => {
+            res.render('funding/single', { funding })
+        })
+});
+app.post('/funding', function (req, res) {
+    fundingApi.FundingNew(req.body)
+        .then(() => {
+            res.redirect("/funding")
+        })
+});
+app.get('/funding/:id/update', function (req, res) {
+    investorsApi.FundingOne(req.params.id)
+        .then(fundings => {
+            res.render('funding/update', { fundings});
+        })
+});
+app.put('/funding/:id', (req, res) => {
+    fundingApi.FundingUpdate(req.params.id, req.body)
+        .then(() => {
+            res.redirect("/funding/" + req.params.id)
+        })
+});
+
+app.delete('/funding/:id', (req, res) => {
+    fundingApi.FundingDelete(req.params.id)
+        .then(() => {
+            res.redirect("/funding");
+        });
 });
 
 //BOILER
