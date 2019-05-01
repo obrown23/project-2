@@ -1,0 +1,8 @@
+display: grid;
+height: 100vh;
+width: 100vw;
+background-image: url("/images/joker.gif");
+background-size: cover;
+opacity: 0.9;
+grid-template-columns: 100%;
+grid-template-rows: 1fr 1fr 1fr;
