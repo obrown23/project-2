@@ -104,14 +104,14 @@ app.delete('/investors/:id', (req, res) => {
 // grabing all funding companies
 app.get('/funders', function (req, res) {
     fundingApi.FundingAll()
-    .then(funding => {
-        res.render('funders/index', {funding})
+    .then(fundings => {
+        res.render('funders/index', {fundings})
     })
 })
 app.get('/funders/:id', function (req, res) {
     fundingApi.FundingOne(req.params.id)
-        .then(fundings => {
-            res.render('funders/single', { fundings })
+        .then(funderings => {
+            res.render('funders/single', { funderings })
         })
 });
 app.post('/funders', function (req, res) {
@@ -122,8 +122,8 @@ app.post('/funders', function (req, res) {
 });
 app.get('/funders/:id/update', function (req, res) {
     fundingApi.FundingOne(req.params.id)
-        .then(fundings => {
-            res.render('funding/update', { fundings});
+        .then(funderings => {
+            res.render('funding/update', { funderings});
         })
 });
 app.put('/funders/:id', (req, res) => {

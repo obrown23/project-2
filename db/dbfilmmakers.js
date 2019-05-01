@@ -104,6 +104,7 @@ let newFilmmakers = [
 
 ]
 
-filmmaker.FilmNew(newFilmmakers).then(filmmakers =>{
+filmmaker.FilmNew(newFilmmakers)
+.then(filmmakers =>{
     console.log('Added DB', filmmakers)
 })

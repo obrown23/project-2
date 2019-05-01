@@ -45,3 +45,6 @@ let newFunding = [
     },  
 ]
 funding.FundingNew(newFunding)
+.then(funders =>{
+    console.log('Added DB', funders)
+})
