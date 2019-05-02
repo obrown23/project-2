@@ -129,7 +129,7 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     }
 
-    .filmNa{
+    /* .filmNa{
         display: flex;
         justify-content: center;
         /* border: solid purple; */
@@ -140,9 +140,9 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
         padding: 0%;
         margin: 0%;
     
-    }
+    } */
 
-    .listly{
+    /* .listly{
         display: flex;
         justify-content: center;
          border: solid black;
@@ -152,7 +152,7 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
         width: 90%;
         padding: 0%;
         margin: 0%;
-    }
+    } */
     /* filmmakers update */
     #filmUpdate{
         display: grid;
