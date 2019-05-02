@@ -1,7 +1,8 @@
-<h1>Welcome Funders!!!</h1>
-<h3>Please Input Your Information Below</h3>
+<div id="funPage">
+<h1 class="titleU">Welcome Funders!!!</h1>
+<h3 class="titleU2">Please Input Your Information Below</h3>
 
-<div>
+<div id="funSelection">
   {{#each fundings}}
     <p>
       <a href="/funders/{{ _id }}">
@@ -11,7 +12,7 @@
     </p>
   {{/each}}
 </div>
-
+<div id="funName">
 <form method="POST" action="/funders">
   <label for="name">Name</label>
   <input type="text" name="name" value="" /> <br>
@@ -23,3 +24,5 @@
   <input type="text" name="phone" value="" /> <br>
   <input type="submit" value="Create New User" />
 </form>
+</div>
+</div>

@@ -3,17 +3,17 @@
 display: grid;
 height: 100vh;
 width: 100vw;
-background-image: url("../public/high-resolution-bg.jpg");
+background-image: url("../public/filmImage.jpg");
 background-size: cover;
 background-repeat: no-repeat;
-opacity: 0.9;
+opacity: 0.8;
 grid-template-columns: 100%;
 grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 .homH1{
     display: flex;
     justify-content: center;
-    border: solid yellow;
+    /* border: solid yellow; */
     font-size: 4.4em;
     font-style: oblique;
     grid-row: 1;
@@ -26,7 +26,8 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
 .filmmakers{
     display: flex;
     justify-content: center;
-    border: solid purple;
+    /* border: solid purple; */
+    color:black;
     grid-row: 2;
     font-size: 2.4em;
     width: 90%;
@@ -37,7 +38,8 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
 .investors{
     display: flex;
     justify-content: center;
-    border: solid green;
+    /* border: solid green; */
+    color: black;
     font-size: 2.4em;
     grid-row: 3;
     width: 90%;
@@ -47,11 +49,129 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
 .funding{
     display: flex;
     justify-content: center;
-    border: solid black;
+    /* border: solid black; */
     font-size: 2.4em;
-    color: green;
+    color: black;
     grid-row: 4;
     width: 90%;
     padding: 0%;
     margin: 0%;
 }
+/* filmmakers info page*/
+#filmPage{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../public/high-resolution-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .titleF{
+        display: flex;
+        justify-content: center;
+        /* border: solid yellow; */
+        font-size: 4.4em;
+        font-style: oblique;
+        grid-row: 1;
+        /* padding: 0%;
+        margin: 0%; */
+        width: 90%;
+         height: 40%; 
+    }
+    
+    .titleF2{
+        display: flex;
+        justify-content: center;
+        /* border: solid purple; */
+        color:black;
+        grid-row: 2;
+        font-size: 2.4em;
+        width: 90%;
+        padding: 0%;
+        margin: 0%;
+    
+    }
+    #list{
+        display: flex;
+        justify-content: center;
+         border: solid black;
+        color: black;
+        font-size: 2.4em;
+        grid-row: 3;
+        width: 90%;
+        padding: 0%;
+        margin: 0%;
+    }
+    #firstPage{
+        display: flex;
+        justify-content: center;
+        /* border: solid black; */
+        font-size: 1.4em;
+        color: black;
+        grid-row: 4;
+        width: 90%;
+        padding: 0%;
+        margin: 0%;
+    }
+    /* funders page */
+    #funPage{
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../public/Funders.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .titleU{
+            display: flex;
+            justify-content: center;
+            /* border: solid yellow; */
+            font-size: 4.4em;
+            font-style: oblique;
+            grid-row: 1;
+            /* padding: 0%;
+            margin: 0%; */
+            width: 90%;
+             height: 40%; 
+        }
+        
+        .titleU2{
+            display: flex;
+            justify-content: center;
+            /* border: solid purple; */
+            color:black;
+            grid-row: 2;
+            font-size: 2.4em;
+            width: 90%;
+            padding: 0%;
+            margin: 0%;
+        
+        }
+        #funSelection{
+            display: flex;
+            justify-content: center;
+             border: solid black;
+            color: black;
+            font-size: 2.4em;
+            grid-row: 3;
+            width: 90%;
+            padding: 0%;
+            margin: 0%;
+        }
+        #funName{
+            display: flex;
+            justify-content: center;
+            /* border: solid black; */
+            font-size: 1.4em;
+            color: black;
+            grid-row: 4;
+            width: 90%;
+            padding: 0%;
+            margin: 0%;
+        }
