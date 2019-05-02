@@ -1,9 +1,11 @@
-<h1></h1>
+<div id="filmSing">
+<div class="filmNa">
 <h3>{{funderings.name}}</h3>
 <h3>{{funderings.website}}</h3>
 <h3>{{funderings.email}}</h3>
 <h3>{{funderings.phone}}</h3>
-
+</div>
+<div id='listly'>
 <a href="/funders/{{funderings.id}}/update">
         <input type="submit" value="Update Fund" />
 </a>
@@ -11,3 +13,5 @@
 <form method="POST" action="/funders/{{ funderings ._id }}?_method=DELETE">
     <input type="submit" value="Delete User" />
 </form>
+</div>
+</div>
