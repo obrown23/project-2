@@ -1,4 +1,4 @@
-<div >
+<div id="filmSing" >
 <h3>{{filmmakers.film}}</h3>
 <h3>{{filmmakers.director}}</h3>
 <h3>{{filmmakers.writer}}</h3>
@@ -6,11 +6,13 @@
 <h3>{{filmmakers.website}}</h3>
 <h3>{{filmmakers.email}}</h3>
 <h3>{{filmmakers.phone}}</h3>
-
+<div class="filmNa">
 <a href="/filmmakers/{{filmmakers.id}}/update">
         <input type="submit" value="Update Film" />
 </a>
+</div>
 
+<div class="listly"></div>
 <form method="POST" action="/filmmakers/{{ filmmakers ._id }}?_method=DELETE">
     <input type="submit" value="Delete User" />
 </form>
