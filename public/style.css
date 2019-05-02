@@ -116,7 +116,25 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
         padding: 0%;
         margin: 0%;
     }
-    /* funders page */
+/* filmmakers single page */
+#filmSing{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../public/Funders.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+
+
+
+
+    /* funders pageindex */
     #funPage{
         display: grid;
         height: 100vh;
@@ -175,3 +193,63 @@ grid-template-rows: 1fr 1fr 1fr 1fr;
             padding: 0%;
             margin: 0%;
         }
+
+        /* investors index */
+        #investorsPage{
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            background-image: url("../public/investors.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            }
+            .titleI{
+                display: flex;
+                justify-content: center;
+                /* border: solid yellow; */
+                font-size: 4.4em;
+                font-style: oblique;
+                grid-row: 1;
+                /* padding: 0%;
+                margin: 0%; */
+                width: 90%;
+                 height: 40%; 
+            }
+            
+            .titleI2{
+                display: flex;
+                justify-content: center;
+                /* border: solid purple; */
+                color:black;
+                grid-row: 2;
+                font-size: 2.4em;
+                width: 90%;
+                padding: 0%;
+                margin: 0%;
+            
+            }
+            #investorsSelection{
+                display: flex;
+                justify-content: center;
+                 border: solid black;
+                color: black;
+                font-size: 2.4em;
+                grid-row: 3;
+                width: 90%;
+                padding: 0%;
+                margin: 0%;
+            }
+            #investorsSection{
+                display: flex;
+                justify-content: center;
+                /* border: solid black; */
+                font-size: 1.4em;
+                color: black;
+                grid-row: 4;
+                width: 90%;
+                padding: 0%;
+                margin: 0%;
+            }

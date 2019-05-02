@@ -1,7 +1,8 @@
-<h1>Welcome Investors!!!</h1>
-<h3>Please Input Your Information Below</h3>
+<div id="investorsPage">
+<h1 class="titleI">Welcome Investors!!!</h1>
+<h3 class="tileI2">Please Input Your Information Below</h3>
 
-<div>
+<div id="investorsSelection">
   {{#each investors}}
     <p>
       <a href="/investors/{{ _id }}">
@@ -11,7 +12,7 @@
     </p>
   {{/each}}
 </div>
-
+<div id="investorsSection">
 <form method="POST" action="/investors">
   <label for="name">Name</label>
   <input type="text" name="name" value="" /> <br>
@@ -23,3 +24,5 @@
   <input type="text" name="phone" value="" /> <br>
   <input type="submit" value="Create New User" />
 </form>
+</div>
+</div>
