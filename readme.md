@@ -1,7 +1,7 @@
 WDI_Project_2
 
 Project: 
-Heroku Link:https://dashboard.heroku.com/apps/stark-bastion-45598/resources
+Heroku Link:https://stark-bastion-45598.herokuapp.com/
 Trello Board: https://trello.com/b/biLCtNJL/project-2
 Technologies Used:
 Javascript, CSS, NodeJs, Express, MongoDb, Mongoose 
