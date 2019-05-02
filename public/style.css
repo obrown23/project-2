@@ -1,8 +1,34 @@
+/* homepage */
+#homePage{
 display: grid;
 height: 100vh;
 width: 100vw;
-background-image: url("/images/joker.gif");
+background-image: url("../public/high-resolution-bg.jpg");
 background-size: cover;
+background-repeat: no-repeat;
 opacity: 0.9;
 grid-template-columns: 100%;
-grid-template-rows: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.homH1{
+    display: flex;
+    justify-content: center;
+    border: solid yellow;
+    grid-row: 1;
+}
+
+.filmmakers{
+    border: solid purple;
+    grid-row: 2;
+
+}
+.investors{
+    border: solid green;
+    grid-row: 3;
+
+}
+.funding{
+    border: solid black;
+    grid-row: 4;
+
+}
